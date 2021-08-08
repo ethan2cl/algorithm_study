@@ -4,8 +4,11 @@
  *
  * [42] 接雨水
  *
- * 核心就是找到 1 - nums.leng-1 索引的 每个元素的左右两侧的最高的柱子
- * abs(max(left) - max(right)) - curr.height
+ * 如果 height[left]<height[right]，则必有 leftMax<rightMax
+ * 则下表left能接到的雨水就等于 leftMax -height[left]
+ *
+ * 右边反之亦然
+ *
  */
 // @lc code=start
 function trap(height) {
