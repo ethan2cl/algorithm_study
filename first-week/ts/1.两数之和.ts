@@ -7,15 +7,13 @@
 // @lc code=start
 function twoSum(nums: number[], target: number): number[] {
   let hash: Record<number, number> = {}
-  for (let i = 0; i < nums.length; i++) {
-      const result = target - nums[i]
-      if (hash[result]) {
-          return [i, hash[result]]
-      } else {
-          hash[nums[i]] = i
-      }
+  for (let i = 0; i < nums.length; i += 1) {
+    if (hash[target - nums[i]] !== undefined) {
+      return [hash[target - nums[i]], i]
+    }
+    hash[nums[i]] = i
   }
-  return [0, 1]
+  return [-1, -1]
 };
 // @lc code=end
 
