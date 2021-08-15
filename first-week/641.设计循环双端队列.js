@@ -1,4 +1,3 @@
-"use strict";
 /*
  * @lc app=leetcode.cn id=641 lang=typescript
  *
